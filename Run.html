@@ -1,0 +1,58 @@
+<title> Breach Module </title>
+<body>
+<h1> Dam Outline </h1>
+<img src = "{{ url_for('static',filename = 'Outline.png') }}" >
+<form id = "inData" method = "Post" enctype = "multipart/form-data" action="#" >
+<p> <br>
+    <br>
+    Dam Name : <input type = "text" name = "damName" length = 10> 
+    <br>
+    <br>
+       w1: <input type = "text" name = "w1" length = 3 >
+       w2[m]: <input type = "text" name = "w2" length = 3>
+       w3[m]: <input type = "text" name = "w3" length = 3>
+       s1[m]: <input type = "text" name = "s1" length = 3>
+       s2[m]: <input type = "text" name = "s2" length = 3>
+       h1[m]: <input type = "text" name = "h1" length = 3>
+       h2[m]: <input type = "text" name = "h2" length = 3>
+      
+</p>
+<h1> Discretization </h1>
+<p> nx1: <input type = "text" name = "nx1" length = 3 >
+    nx2: <input type = "text" name = "nx2" length = 3>
+    nx3: <input type = "text" name = "nx3" length = 3>
+    ny1: <input type = "text" name = "ny1" length = 3>
+    ny2: <input type = "text" name = "ny2" length = 3>
+</p>
+<br>
+<h1> Material Properties </h1>
+<h2> Dam </h2>
+<p> phi [deg]: <input type = "text" name = "phi1" length = 3>
+    c [kN/m2]: <input type = "text" name = "c1" length = 5>
+    Uw [kN/m3]: <input type = "text" name = "uW1" length = 5>
+    E [N/m2]: <input type = "text" name = "E1" length = 7>
+    v: <input type = "text" name = "v1" length = 3>  
+</p>   
+<br>    
+<h2> Foundation </h2>   
+<p> phi [deg]: <input type = "text" name = "phi2" length = 3 >
+    c [kN/m2]: <input type = "text" name = "c2" length = 5>
+    Uw [kN/m3]: <input type = "text" name = "uW2" length = 5>
+    E [N/m2]: <input type = "text" name = "E2" length = 7>
+    v: <input type = "text" name = "v2" length = 3>      
+</p>    
+<br>
+<br>
+<h1> Watertable Characteristics </h1>
+<p> hw [m]: <input type = "text" name = "hw" length = 3 >
+<br>
+<br>
+type of analysis : <select name = "wAnalysis" id = "wAnalysis" form =  "inData">
+    <option value = "RpD" selected> Rapid Drawdown</option>
+    <option value = "ResW" > Reservoir </option>
+</select> 
+<br>
+<br>
+<input type = "submit" value = "run" id = "run">
+</form>
+</body>
